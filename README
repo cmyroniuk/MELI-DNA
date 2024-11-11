@@ -3,7 +3,10 @@ ENDPOINT MUTANTS : dna-mutant-gzgmewfthhgxaebz.brazilsouth-01.azurewebsites.net/
 Ejemplo body post : { "dna" : ["GCVDAQ", "GAFDSF", "LJTQCH", "LPOHJQ", "CNGJEG", "GDEGGY"] }
 
 Aclaración : Al desplegar en azure surgieron unos inconvenientes que hasta el momento no pude resolver, por ende no se van a poder probar los endpoints anteriores.
+Se puede observar la imagen Home Azure, para validar.
+
 Propuesta : Clonar el repo y probarlo localmente con postman por ejemplo.
+Se debe tener instalado Visual Studio Code. Abrir la solución, compilarla y utilizar postman.
 
 1. Estructura del Proyecto
 "Este proyecto sigue una arquitectura de capas para asegurar una separación clara de responsabilidades. He creado dos Controllers que representan los puntos de entrada para las funcionalidades específicas de la API. Cada Controller maneja solicitudes HTTP y utiliza servicios (Services) a través de la inyección de dependencias."
