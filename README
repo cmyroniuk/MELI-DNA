@@ -1,0 +1,20 @@
+ENDPOINT STATS : dna-mutant-gzgmewfthhgxaebz.brazilsouth-01.azurewebsites.net/api/stats (GET)
+ENDPOINT MUTANTS : dna-mutant-gzgmewfthhgxaebz.brazilsouth-01.azurewebsites.net/api/mutant (POST) 
+Ejemplo body post : { "dna" : ["GCVDAQ", "GAFDSF", "LJTQCH", "LPOHJQ", "CNGJEG", "GDEGGY"] }
+
+Aclaración : Al desplegar en azure surgieron unos inconvenientes que hasta el momento no pude resolver, por ende no se van a poder probar los endpoints anteriores.
+Propuesta : Clonar el repo y probarlo localmente con postman por ejemplo.
+
+1. Estructura del Proyecto
+"Este proyecto sigue una arquitectura de capas para asegurar una separación clara de responsabilidades. He creado dos Controllers que representan los puntos de entrada para las funcionalidades específicas de la API. Cada Controller maneja solicitudes HTTP y utiliza servicios (Services) a través de la inyección de dependencias."
+
+2. Capas de Servicio
+"En la capa de Service, implementé la lógica de negocio de cada Controller. Los servicios son clases que encapsulan operaciones complejas y coordinan acciones. Esto permite que los Controllers solo gestionen la entrada y salida de datos, delegando el procesamiento a los servicios.
+
+3. Capas de Repositorio
+"En la capa de Repository, implementé la lógica de acceso a datos, de modo que los servicios no interactúen directamente con la base de datos. Los Repositories se encargan de las consultas SQL, encapsulando la persistencia de datos. Esto facilita el mantenimiento y permite cambiar la implementación de acceso a datos sin afectar la capa de negocio."
+
+4. Inyección de Dependencias
+"Utilicé la inyección de dependencias para conectar estas capas de forma flexible y desacoplada:
+Cada Controller recibe su Service a través de la inyección de dependencias, permitiendo que el Service pueda ser cambiado sin modificar el Controller.
+De igual forma, cada Service recibe su Repository mediante inyección de dependencias, lo cual facilita la prueba de la lógica del negocio sin depender directamente de la base de datos."
